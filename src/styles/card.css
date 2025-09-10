@@ -7,9 +7,9 @@
 }
 
 .image img{
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
     text-align: center;
     object-fit: cover;
     object-position: center;
@@ -21,8 +21,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #131516;
-    font-family: 'Lato', sans-serif;
+    background-color: #150518;
+    font-family: 'cursive', sans-serif;
     padding: 0 25px;
 }
 
@@ -31,47 +31,48 @@
     display: flex;
     width: 650px;
     height: auto;
-    background: linear-gradient(to right,#024945, #12a89c); /* #2FEBD4, #DEFFFD*/
+    background: linear-gradient(to right,#3b6262, #95d1cd, #234f49); /* #2FEBD4, #DEFFFD*/
     border-radius: 12px;
-    box-shadow: 1px 7px 10px 2px rgba(0, 0, 0, .15);
+    box-shadow: linear-gradient(tp right , #024945, #12a89c)
 }
 
-.descripcion{
+.description1{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.image, .descripcion{
+.image, .description1{
     padding: 30px;
-    text-align: left;
-    color: #FFFFFF;
+    text-align: center;
+    color: #150518;
 }
 
-.descripcion h2{
+.description1 h2{
     line-height: 2;
     font-weight: 500;
     font-size: medium;
 }
 
-.descripcion p{
+.description1 p{
     font-weight: 300;
     font-size: 17px;
 }
 
-.descripcion h1{
+.description1 h1{
     font-weight: 400;
 }
 
 /* ICONS */
-.descripcion .icons{
+.description1 .icons{
     margin-top: 30px;
 }
-.descripcion .icons a{
+.description1 .icons a{
     display: inline-block;
     margin: 0 30px 0 30px;
-    color: #FFFFFF;
+    color:#150518;
+    text-decoration: none;  
     font-size: 30px;
     transition: .3s;
 }
@@ -88,7 +89,7 @@ a:hover{
     width: 100px;
     color: white;
     font-size: 12px;
-    background-color: #192733;
+    background-color: #0a1310;
     border-radius: 10px;
     padding: 5px 10px 5px 10px;
 }
@@ -115,7 +116,7 @@ a:hover{
     .card-container{
         display: flex;
         flex-direction: column-reverse;
-        background: linear-gradient(#12a89c, #024945);
+        background: linear-gradient(#0b3834, #4bf1e9);
         width: 750px;
         margin-top: 12px;
         margin-bottom: 12px;
@@ -127,23 +128,23 @@ a:hover{
     .image{
         padding: 15px 0 0 0;
     }
-    .descripcion{
+    .description1{
         padding: 10px 20px 18px 20px;
     }
-    .descripcion h1{
+    .description1 h1{
         font-weight: 400;
         font-size: 25px;
     }
-    .descripcion h2{
+    .description1 h2{
         line-height: 2;
         font-weight: 500;
         font-size: 17px;
     }
-    .descripcion p{
+    .description1 p{
         font-weight: 300;
         font-size: 15px;
     }
-    .descripcion .icons{
+    .description1 .icons{
         margin-top: 18px;
     }
 }
