@@ -1,4 +1,8 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  assets: {
+    // Enable Astro's built-in image optimization
+    // You can configure domains, cache, etc. here if needed
+  },
+});

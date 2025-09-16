@@ -1,0 +1,8 @@
+---
+// src/components/ProfileImage.astro
+import { Image } from 'astro:assets';
+const { src, alt } = Astro.props;
+---
+<div class="image">
+    <Image src={src} alt={alt} width={200} height={200} />
+</div>

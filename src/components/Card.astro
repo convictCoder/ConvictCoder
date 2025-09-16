@@ -1,8 +1,7 @@
 ---
-//src/components/Card.astro
-const {name, position, aboutMe, linkedin, github, cvLink, profileImage } = Astro.props;
-
+const {name, position, aboutMe, linkedin, github, portfolioLink, profileImage } = Astro.props;
 import '../styles/card.css';
+import ProfileImage from './ProfileImage.astro';
 ---
 
 <div class="container">
@@ -24,16 +23,15 @@ import '../styles/card.css';
                     </span>
                     <i class="bi bi-github"></i>
                 </a>
-                <a href={cvLink} class="hover-text" target="_blank">
+                <a href={portfolioLink} class="hover-text" target="_blank">
                     <span class="tooltip-text" id="fade">
-                        Resume
+                        Gaming
                     </span>
-                    <i class="bi bi-file-earmark-arrow-down"></i>
+                    <i class="bi bi-link-45deg"></i>
                 </a>
+                
             </div>
         </div>
-        <div class="image">
-            <img src={profileImage} alt="">
-        </div>
+        <ProfileImage src={profileImage} alt="pic" />
     </div>
 </div>
