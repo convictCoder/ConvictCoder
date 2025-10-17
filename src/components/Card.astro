@@ -1,5 +1,5 @@
 ---
-const {name, position, aboutMe, linkedin, github, portfolioLink, profileImage } = Astro.props;
+const {name, position, aboutMe, linkedin, github, portfolioLink, profileImage, resumeLink } = Astro.props;
 import '../styles/card.css';
 import ProfileImage from './ProfileImage.astro';
 ---
@@ -27,8 +27,16 @@ import ProfileImage from './ProfileImage.astro';
                     <span class="tooltip-text" id="fade">
                         Gaming
                     </span>
-                    <i class="bi bi-link-45deg"></i>
+                    <i class="bi bi-controller"></i>
                 </a>
+                {resumeLink && (
+                    <a href={resumeLink} class="hover-text" target="_blank">
+                        <span class="tooltip-text" id="fade">
+                            Resume
+                        </span>
+                        <i class="bi bi-file-earmark-person"></i>
+                    </a>
+                )}
                 
             </div>
         </div>
