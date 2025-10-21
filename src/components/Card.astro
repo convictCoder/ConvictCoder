@@ -1,45 +1,49 @@
 ---
-const {name, position, aboutMe, linkedin, github, portfolioLink, profileImage, resumeLink } = Astro.props;
-import '../styles/card.css';
-import ProfileImage from './ProfileImage.astro';
+const {
+  name,
+  position,
+  aboutMe,
+  linkedin,
+  github,
+  portfolioLink,
+  profileImage,
+  resumeLink,
+} = Astro.props;
+import "../styles/card.css";
+import ProfileImage from "./ProfileImage.astro";
 ---
 
 <div class="container">
-    <div class="card-container">
-        <div class="description1">
-            <h1>{name}</h1>
-            <h2>{position}</h2>
-            <p>{aboutMe}</p>
-            <div class="icons">
-                <a href={linkedin} class="hover-text" target="_blank">
-                    <span class="tooltip-text" id="fade">
-                        LinkedIn
-                    </span>
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href={github} class="hover-text" target="_blank">
-                    <span class="tooltip-text" id="fade">
-                        GitHub
-                    </span>
-                    <i class="bi bi-github"></i>
-                </a>
-                <a href={portfolioLink} class="hover-text" target="_blank">
-                    <span class="tooltip-text" id="fade">
-                        Gaming
-                    </span>
-                    <i class="bi bi-controller"></i>
-                </a>
-                {resumeLink && (
-                    <a href={resumeLink} class="hover-text" target="_blank">
-                        <span class="tooltip-text" id="fade">
-                            Resume
-                        </span>
-                        <i class="bi bi-file-earmark-person"></i>
-                    </a>
-                )}
-                
-            </div>
-        </div>
-        <ProfileImage src={profileImage} alt="pic" />
+  <div class="card-container">
+    <div class="description1">
+      <h1>{name}</h1>
+      <h2>{position}</h2>
+      <p>{aboutMe}</p>
+      <div class="icons">
+        <a href={linkedin} class="hover-text" target="_blank">
+          <span class="tooltip-text" id="fade"> LinkedIn </span>
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href={github} class="hover-text" target="_blank">
+          <span class="tooltip-text" id="fade"> GitHub </span>
+          <i class="bi bi-github"></i>
+        </a>
+        <a href={portfolioLink} class="hover-text" target="_blank">
+          <span class="tooltip-text" id="fade"> Gaming </span>
+          <i class="bi bi-controller"></i>
+        </a>
+        {
+          resumeLink && (
+            <a href={resumeLink} class="hover-text" target="_blank">
+              <span class="tooltip-text" id="fade">
+                Resume
+              </span>
+              <i class="bi bi-file-earmark-person" />
+            </a>
+          )
+        }
+      </div>
     </div>
+    <ProfileImage src={profileImage} alt="pic" />
+  </div>
 </div>
