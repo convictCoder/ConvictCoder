@@ -1,38 +1,52 @@
-# 👋 Hi, I'm Alana
+# Alana | ConvictCoder
 
-## 🚀 About Me
+I build practical software for reentry, stability, accountability, and decision-making systems.
 
-- Junior Node.js Developer  
-- Passionate about building clean, efficient web apps  
-- Obsessed with turning creative ideas into functional projects  
-- Always learning, experimenting, and shipping  
+My work focuses on turning real-world instability into measurable operational problems that software can help solve.
 
-## 💻 Tech Stack
+## Current Projects
 
-- **Languages:** JavaScript (Node.js), HTML, CSS  
-- **Frameworks & Tools:** Express.js, React, Next.js, Tailwind CSS  
-- **Databases:** MongoDB, Firebase, PostgreSQL (basic)  
-- **Other:** Git/GitHub, REST APIs, Figma  
+### ReEntry OS
+A stability system for justice-impacted people rebuilding after incarceration.
 
-## 🔥 Current Focus
+Core concepts:
+- Survival runway
+- Financial decision gates
+- Obligation tracking
+- Risk visibility
+- Stability metrics
 
-- Expanding full-stack skills with React + Next.js  
-- Deploying projects on Vercel & experimenting with Firebase  
-- Building digital products that combine creativity + utility  
+### OnRecord
+A communication accountability platform designed to reduce memory distortion, ambiguity, and selective revisionism in conflict-heavy conversations.
 
-## 📂 Projects
+## Philosophy
 
-- 🌐 [ConvictCoder.com](https://convictcoder.com) – Personal portfolio  
-- 🛠 Cleaning Service Starter Site – Built for small businesses  
-- 🏍 Motorcycle Repair Shop Site – Local shop demo build  
+Most systems fail because people lose visibility:
+- visibility into money
+- visibility into risk
+- visibility into commitments
+- visibility into patterns
 
-## 📈 Goals
+I build tools that make those systems visible before collapse happens.
 
-- Ship 1–2 new projects per month  
-- Land freelance builds ($500 starter sites)  
-- Keep pushing skills toward advanced backend + cloud integration  
+## Stack
 
-## 📫 Contact
+- JavaScript
+- React
+- Next.js
+- Tailwind CSS
+- Node.js
+- PostgreSQL
+- Firebase
+- GitHub
 
-- GitHub: [github.com/alana206](https://github.com/alana206)  
-- Email: <alanaandres@gmail.com>  
+## Current Focus
+
+- Shipping deployable products
+- Building ConvictCoder
+- Reentry technology infrastructure
+- Stability-focused product systems
+
+## Mission
+
+ConvictCoder exists to build practical technology for people usually treated as statistics instead of users.
