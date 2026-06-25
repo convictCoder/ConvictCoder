@@ -277,32 +277,84 @@ h1 {
 }
 
 .social-links {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .social-links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 48px;
+  min-width: 0;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 1px solid rgba(47, 128, 255, 0.42);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(47, 128, 255, 0.14), rgba(47, 128, 255, 0.05));
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.social-links a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 122, 26, 0.2), transparent 58%);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.social-links i,
+.social-links span {
+  position: relative;
+  z-index: 1;
+}
+
+.social-links i {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(47, 128, 255, 0.42);
-  border-radius: 8px;
-  background: rgba(47, 128, 255, 0.1);
-  color: var(--ink);
-  font-size: 1.25rem;
-  text-decoration: none;
-  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  border-radius: 6px;
+  background: rgba(47, 128, 255, 0.18);
+  color: var(--orange);
+  font-size: 1.05rem;
+}
+
+.social-links span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .social-links a:hover,
 .social-links a:focus-visible {
-  background: var(--blue);
+  border-color: var(--orange);
+  background: rgba(47, 128, 255, 0.2);
+  box-shadow: 0 12px 28px rgba(47, 128, 255, 0.16);
   color: #fff;
   transform: translateY(-2px);
+}
+
+.social-links a:hover::after,
+.social-links a:focus-visible::after {
+  opacity: 1;
+}
+
+.social-links a:hover i,
+.social-links a:focus-visible i {
+  background: var(--orange);
+  color: #0b0d12;
 }
 
 .section-band,
@@ -501,6 +553,10 @@ h1 {
 
   .button {
     width: 100%;
+  }
+
+  .social-links {
+    grid-template-columns: 1fr;
   }
 
   .section-band,
