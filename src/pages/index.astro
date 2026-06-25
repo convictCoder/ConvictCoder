@@ -1,18 +1,142 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Card from "../components/Card.astro";
 import alanaJpg from "../assets/alana.jpg";
+import "../styles/card.css";
+
+const projects = [
+  {
+    eyebrow: "Reentry infrastructure",
+    title: "ReEntry OS",
+    description:
+      "A stability system for justice-impacted people rebuilding after incarceration, focused on runway, obligations, decision gates, and visible risk.",
+    tags: ["Product systems", "Reentry", "Stability metrics"],
+  },
+  {
+    eyebrow: "Accountability platform",
+    title: "OnRecord",
+    description:
+      "A communication tool designed to reduce ambiguity, memory distortion, and selective revisionism in conflict-heavy conversations.",
+    tags: ["Conflict clarity", "Pattern tracking", "Audit trails"],
+  },
+  {
+    eyebrow: "Resource access",
+    title: "Victory Connect",
+    description:
+      "A Washington reentry resource app built around practical search, location awareness, and faster access to support after release.",
+    tags: ["React", "Maps", "Resource data"],
+  },
+];
+
+const principles = [
+  "Make risk visible before collapse.",
+  "Build for people with real constraints.",
+  "Turn lived experience into operational software.",
+];
 ---
 
-<BaseLayout title="Alana | Portfolio Card" description="I’m a full-stack developer turning lessons learned the hard way into software that actually matters.">
-		<Card
-			name="Alana"
-			position="Full Stack Developer"
-			aboutMe="From prison bars to code blocks, I build software that matters"
-			linkedin="https://www.linkedin.com/in/alanaandres"
-			github="https://github.com/convictCoder"
-			portfolioLink="https://fornnitefavs.netlify.app/"
-			resumeLink="/resume.pdf"
-			profileImage={alanaJpg}
-		/>
+<BaseLayout
+  title="Alana | ConvictCoder"
+  description="Alana is a Seattle software developer building practical tools for reentry, stability, accountability, and decision-making systems."
+>
+  <div class="site-shell">
+    <header class="topbar" aria-label="Site header">
+      <a class="brand" href="/" aria-label="ConvictCoder home">ConvictCoder</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#systems">Systems</a>
+        <a href="/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Seattle software developer</p>
+          <h1 id="hero-title">I build software for people rebuilding under pressure.</h1>
+          <p class="hero-lede">
+            I turn lived experience, instability, and hard-won pattern recognition into practical systems for reentry, accountability, and better decisions.
+          </p>
+
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#work">View the work</a>
+            <a class="button button-secondary" href="https://github.com/convictCoder" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+
+          <dl class="signal-grid" aria-label="Professional signals">
+            <div>
+              <dt>Focus</dt>
+              <dd>Reentry tech</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>React, Astro, Node</dd>
+            </div>
+            <div>
+              <dt>Mode</dt>
+              <dd>Builder, not spectator</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="portrait-panel" aria-label="Alana profile summary">
+          <div class="portrait-frame">
+            <Image src={alanaJpg} alt="Alana, founder of ConvictCoder" width={560} height={560} />
+          </div>
+          <div class="profile-card">
+            <p class="profile-kicker">Alana</p>
+            <p>Full-stack developer building practical technology for people usually treated as statistics instead of users.</p>
+            <div class="social-links" aria-label="Profile links">
+              <a href="https://www.linkedin.com/in/alanaandres" target="_blank" rel="noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+              <a href="https://github.com/convictCoder" target="_blank" rel="noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+              <a href="https://fornnitefavs.netlify.app/" target="_blank" rel="noreferrer" aria-label="Portfolio project"><i class="bi bi-controller"></i></a>
+              <a href="/resume.pdf" target="_blank" rel="noreferrer" aria-label="Resume PDF"><i class="bi bi-file-earmark-person"></i></a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section-band" id="systems" aria-labelledby="systems-title">
+        <div class="section-heading">
+          <p class="eyebrow">Operating philosophy</p>
+          <h2 id="systems-title">Most systems fail when people lose visibility.</h2>
+        </div>
+        <div class="principle-list">
+          {principles.map((principle) => <p>{principle}</p>)}
+        </div>
+      </section>
+
+      <section class="work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Current build list</p>
+          <h2 id="work-title">Products with a reason to exist.</h2>
+          <p>
+            The through-line is simple: make the invisible parts of survival, trust, and decision-making measurable enough to act on.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          {projects.map((project) => (
+            <article class="project-card">
+              <p class="project-eyebrow">{project.eyebrow}</p>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <ul>
+                {project.tags.map((tag) => <li>{tag}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="cta-section" aria-labelledby="cta-title">
+        <p class="eyebrow">What I am building toward</p>
+        <h2 id="cta-title">Reentry software that respects the user enough to be useful.</h2>
+        <p>
+          ConvictCoder is where accountability, practical product thinking, and justice-impacted experience meet. The goal is not inspiration. The goal is working tools.
+        </p>
+        <a class="button button-primary" href="https://www.linkedin.com/in/alanaandres" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+      </section>
+    </main>
+  </div>
 </BaseLayout>
